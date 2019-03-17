@@ -15,18 +15,18 @@ function wyze_custom_wooemail_headers( $headers, $email_id, $order ) {
     //If user is not logged in
     if ( $user_id == 0 ) {
       // Replace the emails below to your desire email
-      $emails = array('orders@rosiemadeathing.co.uk', $email);
+      $emails = array('customernotloggedin@gmail.com', $email);
     }
     //If user is logged in
     else {
       if ( in_array( 'wholesale_customer', $user_data->roles )  ) {
-          $emails = array('office@rosiemadeathing.co.uk', $email);
+          $emails = array('wholesalecustomer@gmail.com', $email);
       }
       elseif ( in_array( 'wholesale_customer_10', $user_data->roles )  ) {
-          $emails = array('office@rosiemadeathing.co.uk', $email);
+          $emails = array('specialwholesalecustomer@gmail.com', $email);
       }
       else {
-        $emails = array('orders@rosiemadeathing.co.uk', $email);
+        $emails = array('otherloggedincustomer@gmail.com', $email);
       }
     }
 
